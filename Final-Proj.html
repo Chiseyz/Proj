@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC Banilad Survival Guide</title>
+    <link rel="stylesheet" href="Final-proj.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="UCLOGO.png" id="UClogo">
+                <div class="logo"> UC-B Survival Guide </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('study')">Study Tips</a></li>
+                <li><a href="#" onclick="showPage('rules')">Rules</a></li>
+                <li><a href="#" onclick="showPage('facilities')">Facilities</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1> UC Banilad Survival Guide</h1>
+                <p class="subtitle">Everything students need to survive university life</p>
+                <div class="welcome-message" id="welcomeMessage"></div>
+                <div class="intro">
+                    <p>Welcome to the University of Cebu Banilad Campus! This guide is designed to help you navigate campus life, ace your studies, understand the rules, and know what to do in emergencies. Whether you're a freshman or a senior, this is your ultimate survival toolkit.</p>
+                </div>
+                <div class="button-grid">
+                    <button class="nav-button" onclick="showPage('study')"> Study Tips</button>
+                    <button class="nav-button" onclick="showPage('rules')"> School Rules</button>
+                    <button class="nav-button" onclick="showPage('facilities')"> Facilities</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY TIPS PAGE -->
+        <div id="study" class="page">
+            <h1> Study & Academic Survival</h1>
+            <p>Master your studies with these proven strategies and tips.</p>
+
+            <h2>Study Tips</h2>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>How to Take Effective Notes</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>• Use the Cornell Method: divide your page into notes, cues, and summary sections</p>
+                    <p>• Write in your own words rather than copying verbatim</p>
+                    <p>• Use abbreviations and symbols to save time</p>
+                    <p>• Review and rewrite notes within 24 hours for better retention</p>
+                    <p>• Color-code different subjects or topics</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Time Management Strategies</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>• Study in short sessions of 25-30 minutes (Pomodoro Technique) instead of long hours</p>
+                    <p>• Create a weekly schedule with dedicated study blocks</p>
+                    <p>• Prioritize tasks using the Eisenhower Matrix (urgent vs important)</p>
+                    <p>• Eliminate distractions: put your phone away during study time</p>
+                    <p>• Take regular 5-10 minute breaks to maintain focus</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Avoiding Cramming</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-content">
+                    <p>• Start studying at least one week before major exams</p>
+                    <p>• Break material into smaller chunks and study one topic at a time</p>
+                    <p>• Use active recall: test yourself regularly without looking at notes</p>
+                    <p>• Form study groups to discuss and explain concepts to each other</p>
+                    <p>• Sleep well the night before exams - rest is crucial for memory</p>
+                </div>
+            </div>
+
+            <h2>Exam Preparation Checklist</h2>
+            <p>Click items to check them off:</p>
+            <ul class="checklist" id="examChecklist">
+                <li onclick="toggleCheck(this)">Review syllabus and exam coverage</li>
+                <li onclick="toggleCheck(this)">Organize notes and materials</li>
+                <li onclick="toggleCheck(this)">Create a study schedule</li>
+                <li onclick="toggleCheck(this)">Practice with past exams or sample questions</li>
+                <li onclick="toggleCheck(this)">Prepare exam materials (ID, pens, calculator)</li>
+                <li onclick="toggleCheck(this)">Get 7-8 hours of sleep before exam day</li>
+                <li onclick="toggleCheck(this)">Eat a healthy breakfast</li>
+                <li onclick="toggleCheck(this)">Arrive 15 minutes early</li>
+            </ul>
+
+            <h2>What to Bring on Exam Day</h2>
+            <div class="rule-card do-card">
+                <h3>✅ Essential Items</h3>
+                <p>• Valid UC ID</p>
+                <p>• Ballpoint pens (black or blue)</p>
+                <p>• Pencils and erasers</p>
+                <p>• Calculator (if allowed)</p>
+                <p>• Exam permit (if required)</p>
+                <p>• Water bottle</p>
+            </div>
+            <br>
+            <div class="rule-card dont-card">
+                <h3>❌ Leave at Home</h3>
+                <p>• Mobile phones (or turn off completely)</p>
+                <p>• Notes and textbooks</p>
+                <p>• Smartwatches</p>
+                <p>• Food with strong smells</p>
+            </div>
+        </div>
+
+        <!-- RULES PAGE -->
+        <div id="rules" class="page">
+            <h1>📋 School Rules & Etiquette</h1>
+            <p>Stay out of trouble by following these guidelines.</p>
+
+            <h2>Academic Integrity</h2>
+            <div class="rules-section">
+                <div class="rule-card do-card">
+                    <h3>✅ Do's</h3>
+                    <p>• Complete your own work honestly</p>
+                    <p>• Cite sources properly in research papers</p>
+                    <p>• Ask for help from professors during consultation hours</p>
+                    <p>• Collaborate appropriately on group projects</p>
+                    <p>• Report violations if you witness cheating</p>
+                </div>
+                <div class="rule-card dont-card">
+                    <h3>❌ Don'ts</h3>
+                    <p>• Never cheat on exams or quizzes</p>
+                    <p>• Don't plagiarize - always give credit</p>
+                    <p>• Don't share exam answers with others</p>
+                    <p>• Don't use unauthorized materials during tests</p>
+                    <p>• Don't submit someone else's work as your own</p>
+                </div>
+            </div>
+
+            <h2>Classroom Etiquette</h2>
+            <div class="rules-section">
+                <div class="rule-card do-card">
+                    <h3>✅ Do's</h3>
+                    <p>• Arrive on time for all classes</p>
+                    <p>• Respect your professors and classmates</p>
+                    <p>• Ask permission before leaving the room</p>
+                    <p>• Participate actively in discussions</p>
+                    <p>• Keep your workspace clean</p>
+                    <p>• Turn off or silence mobile devices</p>
+                </div>
+                <div class="rule-card dont-card">
+                    <h3>❌ Don'ts</h3>
+                    <p>• Don't interrupt others while speaking</p>
+                    <p>• Don't eat messy or smelly food in class</p>
+                    <p>• Don't talk loudly during lectures</p>
+                    <p>• Don't use your phone during class</p>
+                    <p>• Don't leave trash behind</p>
+                </div>
+            </div>
+
+            <h2>Uniform & Dress Code</h2>
+            <div class="rule-card">
+                <h3>University Guidelines</h3>
+                <p>• Wear your complete UC uniform on designated days</p>
+                <p>• ID must be visible at all times on campus</p>
+                <p>• Business casual attire on non-uniform days (if applicable)</p>
+                <p>• Closed-toe shoes are required</p>
+                <p>• Keep appearance neat and professional</p>
+            </div>
+
+            <h2>Mobile Phone Policy</h2>
+            <div class="rule-card">
+                <h3>📱 Guidelines</h3>
+                <p>• Phones must be on silent mode during class</p>
+                <p>• Use is prohibited during exams (violation = exam confiscation)</p>
+                <p>• Allowed for emergency calls outside the classroom</p>
+                <p>• Can be used for educational purposes with professor's permission</p>
+            </div>
+        </div>
+
+        <!-- FACILITIES PAGE -->
+        <div id="facilities" class="page">
+            <h1>Campus Facilities Guide</h1>
+            <p>Know where everything is and how to use campus facilities.</p>
+
+            <input type="text" class="search-box" id="facilitySearch" placeholder="Search for a facility..." onkeyup="searchFacilities()">
+
+            <div id="facilitiesContainer">
+                <div class="facility-card" data-facility="library">
+                    <h3>University Library</h3>
+                    <p><strong>Location:</strong> Main Building, 2nd Floor</p>
+                    <p><strong>Description:</strong> The UC Library offers a comprehensive collection of books, journals, research materials, and digital resources. Study areas include individual desks, group study rooms, and computer workstations.</p>
+                    <p><strong>Hours:</strong> Monday-Friday: 7:00 AM - 8:00 PM | Saturday: 8:00 AM - 5:00 PM</p>
+                    <p><strong>Rules:</strong> Maintain silence, no food or drinks except water, present ID when borrowing materials, return books on time to avoid fines.</p>
+                </div>
+
+                <div class="facility-card" data-facility="clinic">
+                    <h3>University Clinic</h3>
+                    <p><strong>Location:</strong> Ground Floor, beside Registrar's Office</p>
+                    <p><strong>Description:</strong> The clinic provides first aid, basic medical consultation, and health services. A registered nurse is on duty during school hours.</p>
+                    <p><strong>Hours:</strong> Monday-Friday: 8:00 AM - 5:00 PM</p>
+                    <p><strong>Services:</strong> First aid, health assessment, medical certificates, health education, emergency response.</p>
+                    <p><strong>Reminder:</strong> For serious medical emergencies, call emergency services immediately.</p>
+                </div>
+
+                <div class="facility-card" data-facility="canteen">
+                    <h3>Canteen</h3>
+                    <p><strong>Location:</strong> Ground Floor, near the quad & 7th floor near the elevator</p>
+                    <p><strong>Description:</strong> The canteen offers affordable meals, snacks, and beverages for students and faculty. Multiple food stalls provide variety.</p>
+                    <p><strong>Hours:</strong> Monday-Friday: 7:00 AM - 6:00 PM</p>
+                    <p><strong>Rules:</strong> Clean up after eating, dispose trash properly, respect the queue, no taking food outside without proper containers.</p>
+                </div>
+
+                <div class="facility-card" data-facility="computer lab">
+                    <h3>Computer Laboratory</h3>
+                    <p><strong>Location:</strong> 3rd Floor, IT Building</p>
+                    <p><strong>Description:</strong> Equipped with computers, internet, and software for various courses. Available for research, projects, and coursework.</p>
+                    <p><strong>Hours:</strong> Monday-Friday: 7:00 AM - 7:00 PM | Saturday: 8:00 AM - 5:00 PM</p>
+                    <p><strong>Rules:</strong> No food or drinks, no downloading unauthorized software, save work frequently, log out after use, report any technical issues to the lab assistant.</p>
+                </div>
+
+                <div class="facility-card" data-facility="guidance">
+                    <h3>Guidance Office</h3>
+                    <p><strong>Location:</strong> 2nd Floor, Administration Building</p>
+                    <p><strong>Description:</strong> Provides counseling services, academic guidance, career counseling, and personal development support. Professional counselors are available for consultation.</p>
+                    <p><strong>Hours:</strong> Monday-Friday: 8:00 AM - 5:00 PM</p>
+                    <p><strong>Services:</strong> Individual counseling, academic advising, career planning, crisis intervention, peer counseling programs.</p>
+                    <p><strong>Note:</strong> All consultations are confidential.</p>
+                </div>
+
+                <div class="facility-card" data-facility="registrar">
+                    <h3>Registrar's Office</h3>
+                    <p><strong>Location:</strong> Ground Floor, Administration Building</p>
+                    <p><strong>Description:</strong> Handles enrollment, grades, transcripts, certifications, and academic records.</p>
+                    <p><strong>Hours:</strong> Monday-Friday: 8:00 AM - 5:00 PM</p>
+                    <p><strong>Services:</strong> Enrollment processing, transcript requests, certificate issuance (good moral, enrollment, grades), grade verification, student records management.</p>
+                    <p><strong>Reminder:</strong> Bring valid ID for all transactions. Processing times vary by document type.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about" class="page">
+            <h1>ℹ️ About This Project</h1>
+            
+            <h2>Purpose</h2>
+            <p>The UC Banilad Survival Guide was created to help students navigate campus life more effectively. This comprehensive resource provides essential information about academics, campus facilities, safety procedures, and university policies all in one convenient location.</p>
+
+            <div class="disclaimer">
+                <h3>⚠️ Disclaimer</h3>
+                <p><strong>This website is for educational purposes only.</strong> While we strive to provide accurate and helpful information, this guide should be used as a supplementary resource. Always verify important information with official university offices and channels. Policies and procedures may change, so please check with the relevant departments for the most current information.</p>
+                <p>For official UC policies, enrollment information, and academic inquiries, please visit the official University of Cebu website or contact the appropriate university offices directly.</p>
+            </div>
+
+            <h2>Our Team</h2>
+            <p>This project was developed as part of our Web Development course requirements.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>The Hustler</h3>
+                    <p><strong>Chad R. Sabroso</strong></p>
+                    <p>Project Management, Research, Content Coordination</p>
+                </div>
+                <div class="team-member">
+                    <h3>The Hipster</h3>
+                    <p><strong>Jade Q. Tudtud <br> Aldrie Shadrach Borbon</strong></p>
+                    <p>UI/UX Design, Visual Design, User Experience</p>
+                </div>
+                <div class="team-member">
+                    <h3>The Hacker</h3>
+                    <p><strong>Jade Anthony U. Nacua</strong></p>
+                    <p>Web Development, Programming, Technical Implementation</p>
+                </div>
+            </div>
+            <h2>Feedback</h2>
+            <p>If you have suggestions or notice any issues, please contact the university offices or share feedback with your instructors so this guide can be improved for future students.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 UC Banilad Survival Guide | Educational Project</p>
+    </footer>
+    <script src="final-proj.js"></script>
+</body>
+</html>
